@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-from decouple import config
 from pathlib import Path
 import dj_database_url # add this
 import os # add this
@@ -30,7 +29,7 @@ SECRET_KEY = os.environ.get('secrets.key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False).lower() == 'True'
 
-ALLOWED_HOSTS = OS.environ.get('ALLOWED_HOSTS', 'localhost').split('')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split('')
 
 AUTHENTICATION_BACKENDS = [
 
