@@ -45,8 +45,6 @@ AUTHENTICATION_BACKENDS = [
 
 INSTALLED_APPS = [
     'django.contrib.auth',
-    'allauth',
-    'allauth.account',
     'corsheaders',
     'rest_framework',
     'dog_api',
