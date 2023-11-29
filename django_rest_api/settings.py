@@ -25,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-cy7ovpubbx8&n)s0t0m88gd%brul^i%n6c8sz^1+c(fvm$x(2!'
-
+SECRET_KEY = os.environ.get('secrets.key')
+'django-insecure-cy7ovpubbx8&n)s0t0m88gd%brul^i%n6c8sz^1+c(fvm$x(2!'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', False).lower() == 'True'
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = OS.environ.get('ALLOWED_HOSTS', 'localhost').split('')
 
 AUTHENTICATION_BACKENDS = [
 
@@ -113,6 +113,9 @@ DATABASES = {
         'HOST': 'localhost',
     }
 }
+database_url=os.environ.get('DATABASE_URL')
+DATABASES ['default'] = dj_database_url.parse('database_url')
+
 
 db_from_env = dj_database_url.config(conn_max_age=600) # add this
 DATABASES['default'].update(db_from_env) # add this
