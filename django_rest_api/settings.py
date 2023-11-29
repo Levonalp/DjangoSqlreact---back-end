@@ -112,9 +112,10 @@ DATABASES = {
         'HOST': 'localhost',
     }
 }
-database_url=os.environ.get('DATABASE_URL')
-DATABASES ['default'] = dj_database_url.parse('database_url')
 
+# Override with DATABASE_URL environment variable if it exists
+if os.environ.get('DATABASE_URL'):
+    DATABASES['default'] = dj_database_url.parse(os.environ.get('DATABASE_URL'))
 
 db_from_env = dj_database_url.config(conn_max_age=600) # add this
 DATABASES['default'].update(db_from_env) # add this
