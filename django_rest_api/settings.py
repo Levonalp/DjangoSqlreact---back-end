@@ -57,6 +57,7 @@ INSTALLED_APPS = [
 ]
 SITES_ID = 1
 
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
