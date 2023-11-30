@@ -72,6 +72,6 @@ uvicorn==0.22.0
 uvloop==0.18.0
 watchfiles==0.20.0
 websockets==10.0
-Werkzeug==2.0.4
+Werkzeug==2.0.2
 whitenoise==2.0.0
 wrapt==1.11.1
