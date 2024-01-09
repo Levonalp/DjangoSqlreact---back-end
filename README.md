@@ -24,7 +24,7 @@ Create a `.env` file in the project root with the following variables:
 - The API will be available at `http://localhost:8000/`.
 
 ## Security
-- Uses Django's security best practices..
+- Uses Django's security best practices.
 - Environment variables for sensitive settings.
 
 ## Contribution
