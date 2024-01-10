@@ -5,7 +5,7 @@ This backend application is built using Django, providing API services for a Rea
 
 ## Key Features
 - REST API endpoints for efficient data handling.
-- Integration with PostgreSQL for reliable data storage.
+- Integration with PostgreSQL for reliable data storage..
 - Secure configuration management using environment variables.
 
 ## Installation
