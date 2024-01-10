@@ -2,7 +2,7 @@
 
 ## Project Overview
 This backend application is built using Django, providing API services for a React frontend. It demonstrates a robust implementation of RESTful principles and integrates with a PostgreSQL database for data management.
-...
+..
 ## Key Features
 - REST API endpoints for efficient data handling.
 - Integration with PostgreSQL for reliable data storage.
